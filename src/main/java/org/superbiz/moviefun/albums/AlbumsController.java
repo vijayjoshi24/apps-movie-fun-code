@@ -48,9 +48,9 @@ public class AlbumsController {
     public String uploadCover(@PathVariable long albumId, @RequestParam("file") MultipartFile uploadedFile) throws IOException {
         if (uploadedFile.getSize() > 0) {
             Blob coverBlob = new Blob(
-                getCoverBlobName(albumId),
-                uploadedFile.getInputStream(),
-                uploadedFile.getContentType()
+                    getCoverBlobName(albumId),
+                    uploadedFile.getInputStream(),
+                    uploadedFile.getContentType()
             );
 
             blobStore.put(coverBlob);
@@ -89,4 +89,5 @@ public class AlbumsController {
     private String getCoverBlobName(@PathVariable long albumId) {
         return format("covers/%d", albumId);
     }
+
 }

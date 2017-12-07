@@ -6,6 +6,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false
     username: root
+    password: pivotal
 
   mvc.view:
     prefix: /WEB-INF/
@@ -13,6 +14,6 @@ spring:
 
 s3:
   endpointUrl: http://127.0.0.1:9000
-  accessKey: 26UBOB7J61JERSG29DXR
-  secretKey: VcMRVNnVa2S4/qnFijIfOYrO2T3TCNs9OEAHjM7h
+  accessKey: NHDRBQWZP60CMABVCA09 
+  secretKey: yWlBKXS10I20QR5LFNqRQXCa2j63FHr9502cIcMt
   bucketName: moviefun
