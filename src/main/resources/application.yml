@@ -1,3 +1,6 @@
+rabbitmq:
+  uri: amqp://guest:guest@localhost
+  queue: my-rabbit-queue
 spring:
   jpa:
     generate-ddl: true
@@ -6,6 +9,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false
     username: root
+    password:
 
   mvc.view:
     prefix: /WEB-INF/
@@ -16,7 +20,7 @@ logging.level:
   org.superbiz.moviefun: DEBUG
 
 s3:
-  endpointUrl: <aws endpoint>
-  accessKey: <access key id>
-  secretKey: <secret access key>
-  bucketName: <name of the bucket>
+  endpointUrl: http://
+  accessKey: <ACCESS KEY>
+  secretKey: <SECRET KEY>
+  bucketName: <BUCKET>
